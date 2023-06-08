@@ -4,5 +4,5 @@ import { lazy } from 'react';
 export const AboutPageAsync = lazy(() => new Promise(resolve => {
     //@ts-ignore
     // ТАК В РЕАЛЬНЫХ ПРОЕКТАХ НЕ ДЕЛАТЬ
-    setTimeout(() => resolve(import('./aboutPage')), 1500)
+    setTimeout(() => resolve(import('./about-page')), 1500)
 }) );
