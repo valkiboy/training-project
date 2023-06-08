@@ -1,10 +1,9 @@
 import { Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
-import { routeConfig } from "shared/config/routeConfig/routeConfig"
+import { routeConfig } from "shared/config/route-config/route-config"
 
 
 const AppRouter = () => {
-    console.log('Object.values(routeConfig)', Object.values(routeConfig))
     return (
         <Suspense fallback={<div>Загрузка...</div>}>
             <Routes>
