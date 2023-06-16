@@ -7,35 +7,35 @@ import { Sidebar } from 'widgets/sidebar';
 import { AppRouter } from './providers/router';
 import './styles/index.scss';
 
-const Component = () => {
+function Component() {
     const { t, i18n } = useTranslation();
 
     const toggle = () => {
-        i18n.changeLanguage( i18n.language === 'ru' ? 'en' : 'ru')
-    }
+        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+    };
 
     return (
         <div>
-            <button onClick={toggle}>{t('Перевод')}</button>
+            <button type="button" onClick={toggle}>{t('Перевод')}</button>
             {t('Тестовый пример')}
         </div>
-    )
+    );
 }
 
-const App = () => {
+function App() {
     const { theme } = useTheme();
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback=''>
+            <Suspense fallback="">
                 <Navbar />
-                <div className='content-page'>
+                <div className="content-page">
                     <Sidebar />
                     <AppRouter />
                 </div>
             </Suspense>
         </div>
-    )
+    );
 }
 
 export default App;
