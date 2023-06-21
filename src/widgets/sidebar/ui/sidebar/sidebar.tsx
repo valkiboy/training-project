@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { classNames } from 'shared/lib/class-names/class-names';
-import { LangSwitcher } from 'widgets/lang-switcher/lang-switcher';
 import { ThemeSwitcher } from 'widgets/theme-switcher';
+import { LangSwitcher } from 'widgets/lang-switcher';
 import cls from './sidebar.module.scss';
 
 interface SidebarProps {
